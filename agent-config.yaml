@@ -1,0 +1,34 @@
+# tempo:
+#   configs:
+#   - name: default
+#     push_config:
+#       endpoint: tempo-us-central1.grafana.net:443
+#       basic_auth:
+#         username: 40876
+#         password: eyJrIjoiZjQyMTdlMzBlNTgyZTU3YmNjMmYyZDcxYTAxNTBmNjA3MzcxNjMwMCIsIm4iOiJUZW1wbyIsImlkIjo0ODc0NjF9
+
+#     receivers:
+#       otlp:
+#         protocols:
+#           grpc:
+#             endpoint: 0.0.0.0:55690
+#             # endpoint: "grafana-agent:55680"
+
+
+
+    
+# prometheus:
+#   wal_directory: /tmp/wal
+#   global:
+#     scrape_interval: 5s
+#   configs:
+#     - name: integrations
+#       scrape_configs:
+#         - job_name: integrations/docker
+#           static_configs:
+#             - targets: ['localhost:9090']
+#       remote_write:
+#       - url: https://prometheus-blocks-prod-us-central1.grafana.net/api/prom/push
+#         basic_auth:
+#           username: 90777
+#           password: eyJrIjoiNTgwMDBmYTdhYzhhYWFmNGViNTlkZGIxNGRhOWY1ZWUwMWEwYjEwMCIsIm4iOiJwcm9tZSIsImlkIjo0ODc0NjF9
